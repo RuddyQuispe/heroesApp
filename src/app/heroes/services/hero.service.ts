@@ -21,5 +21,8 @@ export class HeroService {
     this.httpClient.get<Hero>(`${this.baseUrl}/heroes/${id}`)
       .pipe(
         catchError(e => of(undefined))
-      );
+      )
+
+  public getSuggestions = (query: string, size: number = 6): Observable<Array<Hero>> =>
+    this.httpClient.get<Array<Hero>>(`${this.baseUrl}/heroes?q=${query}&_limit=${size}`);
 }

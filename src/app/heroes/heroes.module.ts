@@ -10,6 +10,7 @@ import {SearchPageComponent} from './pages/search-page/search-page.component';
 import {MaterialModule} from "../material/material.module";
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -21,13 +22,14 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     SearchPageComponent,
     HeroCardComponent
   ],
-  imports: [
-    CommonModule,
-    HeroesRoutingModule,
-    MaterialModule,
-    NgOptimizedImage,
-    MatProgressSpinner
-  ]
+    imports: [
+        CommonModule,
+        HeroesRoutingModule,
+        MaterialModule,
+        NgOptimizedImage,
+        MatProgressSpinner,
+        ReactiveFormsModule
+    ]
 })
 export class HeroesModule {
 }
